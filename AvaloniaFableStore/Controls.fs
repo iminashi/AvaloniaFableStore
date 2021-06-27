@@ -34,5 +34,4 @@ let text (store: Store<int>) =
     |> with' (fun t -> store.Subscribe (fun value -> t.Text <- $"Value: %i{value}") |> ignore)
 
 let window title content =
-    Window(Title = title, Width = 300., Height = 100.)
-    |> with' (fun w -> w.Content <- content)
+    Window(Title = title, Width = 300., Height = 100., Content = content)
