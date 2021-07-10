@@ -8,15 +8,18 @@ type private Language = English | Finnish
 
 type Strings =
     { Count: string
-      LanguageCode: string }
+      LanguageCode: string
+      Lag: string }
 
 let English =
     { Count = "Count"
-      LanguageCode = "EN" }
+      LanguageCode = "EN"
+      Lag = "Lag" }
 
 let Finnish =
     { Count = "Arvo"
-      LanguageCode = "FI" }
+      LanguageCode = "FI"
+      Lag = "Viive" }
 
 let private current = new Store<Language>(Language.English)
 let private store = new Store<Strings>(English)

@@ -52,5 +52,9 @@ let panel children =
     Panel()
     |> apply (fun p -> p.Children.AddRange children)
 
+let numericUpDown setProps =
+    NumericUpDown()
+    |> apply setProps
+
 let window title content =
     Window(Title = title, Width = 300., Height = 140., Content = content)
