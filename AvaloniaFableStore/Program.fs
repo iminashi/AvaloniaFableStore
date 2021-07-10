@@ -15,7 +15,7 @@ type App() =
     override this.OnFrameworkInitializationCompleted() =
         match this.ApplicationLifetime with
         | :? IClassicDesktopStyleApplicationLifetime as desktopLifetime ->
-            desktopLifetime.MainWindow <- Counter.view name
+            desktopLifetime.MainWindow <- Controls.window name (Counter.view())
             base.OnFrameworkInitializationCompleted()
         | _ ->
             ()
