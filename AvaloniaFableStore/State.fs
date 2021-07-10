@@ -13,8 +13,6 @@ type State =
 module State =
     let store = new Store<State>(State.Initial)
 
-    let subscribe (f: State -> unit) = store.Subscribe f
-
     let private doChange change state =
         if state.Lag <> 0 then
             async {
