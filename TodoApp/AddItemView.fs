@@ -23,11 +23,8 @@ let view =
     |> Observable.map (String.IsNullOrWhiteSpace >> not)
     |> bind okButton Button.IsEnabledProperty
 
-    cancelButton.SetValue(DockPanel.DockProperty, Dock.Bottom) |> ignore
-    okButton.SetValue(DockPanel.DockProperty, Dock.Bottom) |> ignore
-
     dockPanel [
-        cancelButton
-        okButton
+        cancelButton |> dockBottom
+        okButton |> dockBottom
         textBox
     ]
