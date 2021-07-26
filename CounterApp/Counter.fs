@@ -1,4 +1,4 @@
-﻿module AvaloniaFableStore.Counter
+﻿module Counter
 
 open Avalonia
 open Avalonia.Controls

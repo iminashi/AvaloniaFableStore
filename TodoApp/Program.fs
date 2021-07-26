@@ -1,21 +1,24 @@
-﻿namespace AvaloniaFableStore
+﻿namespace TodoApp
 
 open Avalonia
 open Avalonia.Controls.ApplicationLifetimes
+open Avalonia.Markup.Xaml.Styling
 open Avalonia.Themes.Fluent
+open System
 
 type App() =
     inherit Application()
-    let name = "Fable Store Counter"
+    let name = "Todo App"
 
     override this.Initialize() =
         this.Styles.Add <| FluentTheme(baseUri = null, Mode = FluentThemeMode.Dark)
+        this.Styles.Add <| StyleInclude(baseUri = null, Source = Uri("avares://TodoApp/Styles.axaml"))
         this.Name <- name
 
     override this.OnFrameworkInitializationCompleted() =
         match this.ApplicationLifetime with
         | :? IClassicDesktopStyleApplicationLifetime as desktopLifetime ->
-            desktopLifetime.MainWindow <- Controls.window name (Counter.view())
+            desktopLifetime.MainWindow <- MainWindow.window name
             base.OnFrameworkInitializationCompleted()
         | _ ->
             ()
