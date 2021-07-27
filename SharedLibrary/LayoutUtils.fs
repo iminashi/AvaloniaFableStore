@@ -1,7 +1,8 @@
-﻿module LayoutUtils
+﻿module SharedLibrary.LayoutUtils
 
 open Avalonia
 open Avalonia.Layout
+open Avalonia.Controls
 
 let inline center (x: Layoutable) =
     x.HorizontalAlignment <- HorizontalAlignment.Center
@@ -19,3 +20,7 @@ let inline topRight (x: Layoutable) =
 
 let inline margin m (x: Layoutable) =
     x.Margin <- Thickness(m)
+
+let inline dockBottom (control: IControl) =
+    control
+    |> apply (fun x -> x.SetValue(DockPanel.DockProperty, Dock.Bottom) |> ignore)

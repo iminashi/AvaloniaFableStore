@@ -3,7 +3,9 @@
 open Avalonia
 open Avalonia.Controls
 open FSharp.Control.Reactive
-open LayoutUtils
+open SharedLibrary
+open SharedLibrary.Controls
+open SharedLibrary.LayoutUtils
 
 let private countText =
     text <| fun text ->
@@ -16,7 +18,7 @@ let private countText =
         |> bind text TextBlock.TextProperty
 
 let private changeLanguageButton =
-    button Localization.changeLanguage <| fun btn ->
+    button' Localization.changeLanguage <| fun btn ->
         topRight btn
         margin 2. btn
         btn.Width <- 50.

@@ -2,7 +2,7 @@
 
 open Avalonia.Controls
 open FSharp.Control.Reactive
-open Controls
+open SharedLibrary
 open Models
 
 let window title =

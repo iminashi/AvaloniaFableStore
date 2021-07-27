@@ -8,11 +8,10 @@
 
   <ItemGroup>
     <AvaloniaResource Include="Styles.axaml" />
-    <Compile Include="Controls.fs" />
     <Compile Include="Models.fs" />
     <Compile Include="Database.fs" />
     <Compile Include="State.fs" />
-    <Compile Include="ItemTemplate.fs" />
+    <Compile Include="ItemTemplates.fs" />
     <Compile Include="TodoListView.fs" />
     <Compile Include="AddItemView.fs" />
     <Compile Include="MainWindow.fs" />
@@ -23,6 +22,10 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />
     <PackageReference Include="Fable.Store" Version="1.0.0-beta-005" />
     <PackageReference Include="FSharp.Control.Reactive" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedLibrary\SharedLibrary.fsproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,9 @@
 open Avalonia
 open Avalonia.Controls
 open System
-open Controls
+open SharedLibrary
+open SharedLibrary.Controls
+open SharedLibrary.LayoutUtils
 open Models
 
 let view =

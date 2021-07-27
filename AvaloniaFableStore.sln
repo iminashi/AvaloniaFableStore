@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CounterApp", "CounterApp\CounterApp.fsproj", "{1CB222C1-2AFE-4049-836E-DBD1F6C89B3C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TodoApp", "TodoApp\TodoApp.fsproj", "{7034C17F-1717-4D34-AF90-F72FEBD1B517}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "TodoApp", "TodoApp\TodoApp.fsproj", "{7034C17F-1717-4D34-AF90-F72FEBD1B517}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SharedLibrary", "SharedLibrary\SharedLibrary.fsproj", "{95E0FE91-D0C0-46AF-B68C-9A7F416E2A0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7034C17F-1717-4D34-AF90-F72FEBD1B517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7034C17F-1717-4D34-AF90-F72FEBD1B517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7034C17F-1717-4D34-AF90-F72FEBD1B517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E0FE91-D0C0-46AF-B68C-9A7F416E2A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E0FE91-D0C0-46AF-B68C-9A7F416E2A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E0FE91-D0C0-46AF-B68C-9A7F416E2A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E0FE91-D0C0-46AF-B68C-9A7F416E2A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
