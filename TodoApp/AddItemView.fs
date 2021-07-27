@@ -6,19 +6,18 @@ open System
 open SharedLibrary
 open SharedLibrary.Controls
 open SharedLibrary.LayoutUtils
-open Models
 
 let view =
     let textBox = TextBox(AcceptsReturn = true, Watermark = "Enter your TODO")
 
     let cancelButton = 
         button "Cancel" <| fun () ->
-            State.changePage ItemList
+            State.update (State.changePage Page.ItemList)
             textBox.Text <- String.Empty
 
     let okButton =
         button "OK" <| fun () ->
-            State.addItem textBox.Text
+            State.update (State.addItem textBox.Text)
             textBox.Text <- String.Empty
 
     textBox.GetObservable(TextBox.TextProperty)

@@ -1,7 +1,9 @@
-﻿module Models
+﻿[<AutoOpen>]
+module Models
 
 open System
 
+[<RequireQualifiedAccess>]
 type Page = ItemList | AddItem
 
 type TodoItem =

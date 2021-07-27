@@ -5,11 +5,11 @@ open System.Collections
 open SharedLibrary
 open SharedLibrary.Controls
 open SharedLibrary.LayoutUtils
-open Models
 
 let view =
     let addItembutton =
-        button "Add an item" (fun () -> State.changePage AddItem)
+        button "Add an item" (fun () ->
+            State.update <| State.changePage Page.AddItem)
 
     let itemsControl = ItemsControl(ItemTemplate = ItemTemplates.todoItem)
     State.store

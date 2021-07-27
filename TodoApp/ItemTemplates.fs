@@ -4,7 +4,6 @@ open Avalonia
 open Avalonia.Controls
 open FSharp.Control.Reactive
 open SharedLibrary
-open Models
 
 let todoItem =
     DataTemplate.create <| fun todoItem ->
@@ -15,5 +14,6 @@ let todoItem =
             checkBox.GetObservable(CheckBox.IsCheckedProperty)
             |> Observable.skip 1
             |> Observable.subscribe (fun isChecked ->
-                State.changeChecked todoItem.Id (isChecked.GetValueOrDefault()))
+                let isChecked = isChecked.GetValueOrDefault()
+                State.update <| State.changeChecked todoItem.Id isChecked)
             |> ignore)
