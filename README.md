@@ -1,5 +1,11 @@
+## Description
+
+Some toy projects made with Avalonia/F# without using XAML, MVVM or Elmish.
+
 # Counter App
 
-A counter app using Avalonia, observables and Fable.Store.
+The classic counter app using observables and Fable.Store.
 
-An experiment in creating an Avalonia app in F# without using XAML, MVVM or Elmish.
+# Todo App
+
+The ToDo List App [from Avalonia's tutorials](https://docs.avaloniaui.net/tutorials/todo-list-app).
