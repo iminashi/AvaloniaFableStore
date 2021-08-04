@@ -16,6 +16,14 @@ let update, store =
     let s = new Store<State>(State.Init)
     s.Update, s |> Observable.asObservable
 
+let map f =
+    store
+    |> Observable.map f
+
+let mapDistinct f =
+    map f
+    |> Observable.distinctUntilChanged
+
 let changeChecked id isChecked state =
     let items =
         state.Items

@@ -12,8 +12,7 @@ let view =
             State.update <| State.changePage Page.AddItem)
 
     let itemsControl = ItemsControl(ItemTemplate = ItemTemplates.todoItem)
-    State.store
-    |> Observable.map (fun x -> x.Items :> IEnumerable)
+    State.map (fun x -> x.Items :> IEnumerable)
     |> bind itemsControl ItemsControl.ItemsProperty
 
     dockPanel [

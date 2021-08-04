@@ -7,9 +7,7 @@ open SharedLibrary
 let window title =
     Window(Title = title, Width = 200., Height = 400.)
     |> apply (fun window ->
-        State.store
-        |> Observable.map (fun x -> x.Page)
-        |> Observable.distinctUntilChanged
+        State.mapDistinct (fun x -> x.Page)
         |> Observable.map (function
             | Page.AddItem -> AddItemView.view |> box
             | Page.ItemList -> TodoListView.view |> box)
